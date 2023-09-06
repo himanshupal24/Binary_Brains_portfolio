@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css">
+    <title>team animated</title>
+</head>
+
+<body>
+    
+        <div class="container">
+            <div class="icon">
+                <div class="imgBx active" style="--i:1;" data-id="content1">
+                    <img src="./images/hitesh_lamba.jpg" alt="">
+                </div>
+                <div class="imgBx" style="--i:2;" data-id="content2">
+                    <img src="./images/jiya_jindal.jpg" alt="">
+                </div>
+                <div class="imgBx" style="--i:3;" data-id="content3">
+                    <img src="./images/himanshu_pal.jpg" alt="">
+                </div>
+                <div class="imgBx" style="--i:4;" data-id="content4">
+                    <img src="./images/gauri_panchal.jpg" alt="">
+                </div>
+                <div class="imgBx" style="--i:5;" data-id="content5">
+                    <img src="./images/jai_mishra.jpg" alt="">
+                </div>
+
+            </div>
+            <div class="content">
+                <div class="contentBx active" id="content1">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./images/hitesh_lamba.jpg" alt="">
+                        </div>
+                        <div class="textBx">
+                            <h2>Hitesh<br><span>Developer</span></h2>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contentBx" id="content2">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./images/jiya_jindal.jpg" alt="">
+                        </div>
+                        <div class="textBx">
+                            <h2>Jiya Jindal<br><span>Web Developer</span></h2>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contentBx" id="content3">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./images/himanshu_pal.jpg" alt="">
+                        </div>
+                        <div class="textBx">
+                            <h2>Himanshu Pal<br><span> Web Developer</span></h2>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contentBx" id="content4">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./images/gauri_panchal.jpg" alt="">
+                        </div>
+                        <div class="textBx">
+                            <h2>Gauri<br><span>entrepreneur</span></h2>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contentBx" id="content5">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="./images/jai_mishra.jpg" alt="">
+                        </div>
+                        <div class="textBx">
+                            <h2>Jai Mishra<br><span>Devops</span></h2>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    <script>
+        let imgBx = document.querySelectorAll('.imgBx')
+        let contentBx = document.querySelectorAll('.contentBx')
+
+        for (let i = 0; i < imgBx.length; i++) {
+            imgBx[i].addEventListener('mouseover', function () {
+                for (let i = 0; i < contentBx.length; i++) {
+                    contentBx[i].className = 'contentBx';
+                }
+                document.getElementById(this.dataset.id).className = 'contentBx active';
+
+
+                for (let i = 0; i < imgBx.length; i++) {
+                    imgBx[i].className = 'imgBx';
+                }
+                this.className = 'imgBx active';
+            })
+        }
+    </script>
+</body>
+
+</html>
